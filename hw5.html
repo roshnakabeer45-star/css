@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog Post</title>
+    <style>
+        .blog-post {
+            width: 70%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            font-family: Arial, sans-serif;
+        }
+        .blog-post h2 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        .blog-post .author {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .blog-post p::first-line {
+            font-weight: bold; /* First line bold */
+        }
+
+        .blog-post p::first-letter {
+            font-size: 2em; /* Bigger first letter */
+            color: #d9534f; /* Color for first letter */
+            float: left;
+            margin-right: 5px;
+        }
+
+        /* Quote inside blog */
+        blockquote {
+            margin: 20px 0;
+            padding-left: 15px;
+            border-left: 3px solid #888;
+            font-style: italic;
+            color: #666;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: "“"; /* Add opening quote */
+            font-size: 2em;
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            color: #d9534f;
+        }
+
+        /* Links styling */
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        /* Side-by-side h4 elements */
+        .sub-headings h4 {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        /* Style second h4 using adjacent sibling selector */
+        .sub-headings h4 + h4 {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blog-post">
+        <h2>My First Blog Post</h2>
+        <div class="author">By Roshna Kabeer</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. <a href="#">Read more</a> about how this works.</p>
+
+        <blockquote>This is an important quote inside the blog post.</blockquote>
+
+        <div class="sub-headings">
+            <h4>Subheading One</h4>
+            <h4>Subheading Two</h4>
+        </div>
+    </div>
+
+</body>
+</html>
